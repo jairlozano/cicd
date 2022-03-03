@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -56,7 +56,7 @@ jobs:
         uses: author/action-rollback@stable
         with:
           # Using a known release ID
-          id: ${{ steps.create_release.id }}
+          release_id: ${{ steps.create_release.id }}
           # Using a tag name
           tag: ${{ steps.autotagger.outputs.tagname }}
         env:
