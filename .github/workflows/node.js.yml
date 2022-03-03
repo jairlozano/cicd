@@ -23,7 +23,7 @@ jobs:
       #     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: update version
         id: autotagger
-        run: npm config set version-git-tag true && npm version patch
+        run: npm version patch
       
       - name: Release
         id: create_release
