@@ -12,6 +12,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: config git
+        run: |
+          git config user.email "asneobnaismtoian@gmail.com"
+          git config user.name "asneobnaismtoian"
+
       # - name: Build number
       #   id: generate_Build_Number 
       #   run: npm i -g build-number-generator && buildnumgen
