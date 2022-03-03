@@ -4,7 +4,10 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Running tests for version $npm_package_version...\"",
+    "preversion": "yarn test",
+    "postversion":
+      "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \" version $npm_package_version was successfully released!\""
   },
   "repository": {
     "type": "git",
