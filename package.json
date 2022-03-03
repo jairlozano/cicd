@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jairlozano/cicd/issues"
   },
-  "homepage": "https://github.com/jairlozano/cicd#readme"
+  "homepage": "https://github.com/jairlozano/cicd#readme",
+  "dependencies": {
+    "semver": "^7.3.5"
+  }
 }
