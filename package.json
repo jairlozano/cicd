@@ -11,6 +11,7 @@
     "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "dependencies": {
+    "@octokit/core": "^3.5.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
@@ -21,5 +22,8 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.1",
     "postcss": "^8.4.4"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
