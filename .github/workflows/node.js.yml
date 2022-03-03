@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: Build number
+        id: generate Build Number 
+        run: npm i -g build-number-generator && buildnumgen
         
       - name: Tag
         id: autotagger
