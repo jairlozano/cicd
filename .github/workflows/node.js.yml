@@ -1,8 +1,9 @@
 name: Publish
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - daffyta
 
 jobs:
   build:
@@ -31,10 +32,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
 
-# on:
-#   push:
-#     branches:
-#       - main
+
 
 # jobs:
 #   ci:
