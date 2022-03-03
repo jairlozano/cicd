@@ -21,14 +21,15 @@ jobs:
       #   id: generate_Build_Number 
       #   run: npm i -g build-number-generator && buildnumgen
         
-      # - name: Tag
-      #   id: autotagger
-      #   uses: butlerlogic/action-autotag@stable
-      #   with:
-      #     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: update version
-        id: autotagger
+        id: update_version
         run: npm version patch 
+
+      - name: Tag
+        id: autotagger
+        uses: butlerlogic/action-autotag@stable
+        with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       
       - name: Release
         id: create_release
