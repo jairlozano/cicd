@@ -22,8 +22,5 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.1",
     "postcss": "^8.4.4"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
   }
 }
