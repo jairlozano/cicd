@@ -12,15 +12,18 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Build number
-        id: generate_Build_Number 
-        run: npm i -g build-number-generator && buildnumgen
+      # - name: Build number
+      #   id: generate_Build_Number 
+      #   run: npm i -g build-number-generator && buildnumgen
         
-      - name: Tag
+      # - name: Tag
+      #   id: autotagger
+      #   uses: butlerlogic/action-autotag@stable
+      #   with:
+      #     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: update version
         id: autotagger
-        uses: butlerlogic/action-autotag@stable
-        with:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: npm config set version-git-tag true && npm version --patch
       
       - name: Release
         id: create_release
@@ -52,6 +55,7 @@ jobs:
           tag: ${{ steps.autotagger.outputs.tagname }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
 
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Running tests for version $npm_package_version...\"",
-    "preversion": "yarn test",
+    "preversion": "npm test",
     "postversion":
-      "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \" version $npm_package_version was successfully released!\""
+      "git push --tags && npm publish . --tag && git push && echo \" version was successfully released!\""
   },
   "repository": {
     "type": "git",
