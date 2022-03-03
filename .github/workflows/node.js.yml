@@ -21,9 +21,9 @@ jobs:
       #   id: generate_Build_Number 
       #   run: npm i -g build-number-generator && buildnumgen
         
-      - name: update_version
-        id: update_version
-        run: npm version patch 
+      # - name: update_version
+      #   id: update_version
+      #   run: npm version patch 
 
       - name: Tag
         id: autotagger
