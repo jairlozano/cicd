@@ -1,3 +1,16 @@
+const SentryCliPlugin = require('@sentry/webpack-plugin');
+
+const config = {
+  plugins: [
+    new SentryCliPlugin({
+      include: '.',
+      ignoreFile: '.sentrycliignore',
+      ignore: ['node_modules', 'webpack.config.js'],
+      configFile: 'sentry.properties',
+    }),
+  ],
+};
+
 const quotes = [
     "En esta isla vivió, durante cuatro largos años, Robinson Crusoe, cuya historia no solamente fascinó y emocionó al mundo entero sino que puso en el mapa del mundo a esta isla en la cual viven ochocientas chilenas y chilenos.",
     "Y durante nuestro Gobierno, vamos a entregar cinco nuevos ‘tiatros’ regionales en Iquique, La Serena, ‘Rancuagua’, Concepción y Punta Arenas.",
