@@ -27,19 +27,20 @@ jobs:
 
       - name: Tag
         id: autotagger
-        # uses: butlerlogic/action-autotag@stable
-        # with:
-        #   GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-        uses: actions/setup-node@v1
+        uses: butlerlogic/action-autotag@stable
         with:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           registry-url: 'https://registry.npmjs.org'
-      - name: Publish to NPM registry
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     registry-url: 'https://registry.npmjs.org'
+      # - name: Publish to NPM registry
+      #   run: |
+      #     echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      #     npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
       - name: Release
         id: create_release
