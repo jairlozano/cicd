@@ -1,13 +1,14 @@
 {
   "name": "cicd_example2",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "preversion": "npm install",
-    "version": "npm run build"
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
