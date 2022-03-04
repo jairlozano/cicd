@@ -7,8 +7,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "preversion": "npm install",
-    "version": "npm run build",
-    "postversion": "git push && git push --tags && rm -rf build/temp"
+    "version": "npm run build"
   },
   "dependencies": {
     "@octokit/core": "^3.5.1",
