@@ -1,6 +1,6 @@
 {
   "name": "cicd_example2",
-  "version": "1.1.22",
+  "version": "1.1.23",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
