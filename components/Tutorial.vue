@@ -10,6 +10,7 @@
         <p class="mt-3 text-gray-600">
           We recommend you take a look at the <a href="https://nuxtjs.org" target="_blank" class="button--doc text-green-500 hover:underline">Nuxt documentation</a>, whether you are new or have previous experience with the framework.<br>
         </p>
+        <p>1.1.20</p>
       </div>
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"><svg
